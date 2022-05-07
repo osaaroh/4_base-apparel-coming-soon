@@ -1,6 +1,7 @@
 :root {
     --shadow-red: rgba(169, 131, 131, 0.243);
     --desaturated-red: hsl(0, 36%, 70%);
+    --desaturated-red-transparent: hsla(0, 36%, 70%, 0.6);
     --soft-red: hsl(0, 93%, 68%);
     --dark-grayish-red: hsl(0, 6%, 24%);
     --body-font: "Josefin Sans", sans-serif;
@@ -87,7 +88,21 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
     text-rendering: auto;
     color: var(--desaturated-red);
+    background-color: rgba(255, 255, 255, 0.243);
 }
+
+.ba__content--input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--desaturated-red-transparent);
+    opacity: 1; /* Firefox */
+  }
+  
+  .ba__content--input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--desaturated-red-transparent);
+  }
+  
+  .ba__content--input::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--desaturated-red-transparent);
+  }
 
 .ba__content--input-send{
     position: absolute;
